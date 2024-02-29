@@ -22,7 +22,7 @@ public class Main {
     }
 
 
-    public static void menu(int option){
+    public static void menu(){
         System.out.format("Main Menu %n 1) Play %n 2) Quit ");
         if (option() == 1) {
             System.out.println("placeholder");
@@ -33,7 +33,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-
+        menu();
     }
 }
 
