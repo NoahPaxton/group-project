@@ -94,6 +94,11 @@ public class Main {
 
                 System.out.println();
             }
+
+            else if (option == 2) {
+                System.exit(0)
+            }
+            
         } while (option == 1);
     }
 }
