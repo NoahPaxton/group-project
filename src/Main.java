@@ -24,6 +24,19 @@ public class Main {
             GREEN_APPLE, RED_APPLE, BANANA, MELON, GRAPES, KIWI, STRAWBERRY,
             GREEN_APPLE, RED_APPLE, BANANA, MELON, GRAPES, KIWI, STRAWBERRY,
             GREEN_APPLE, RED_APPLE, BANANA, MELON, GRAPES, KIWI, STRAWBERRY,
+            GREEN_APPLE, RED_APPLE, BANANA, MELON, GRAPES, KIWI, STRAWBERRY,
+            GREEN_APPLE, RED_APPLE, BANANA, MELON, GRAPES, KIWI, STRAWBERRY,
+            GREEN_APPLE, RED_APPLE, BANANA, MELON, GRAPES, KIWI, STRAWBERRY,
+            GREEN_APPLE, GREEN_APPLE, GREEN_APPLE, GREEN_APPLE, GREEN_APPLE, GREEN_APPLE,
+            GREEN_APPLE, GREEN_APPLE, GREEN_APPLE, GREEN_APPLE, GREEN_APPLE, GREEN_APPLE,
+            GREEN_APPLE, GREEN_APPLE, GREEN_APPLE, GREEN_APPLE, GREEN_APPLE, GREEN_APPLE,
+            GREEN_APPLE, GREEN_APPLE, GREEN_APPLE, GREEN_APPLE, GREEN_APPLE, GREEN_APPLE,
+            GREEN_APPLE, GREEN_APPLE, GREEN_APPLE, GREEN_APPLE, GREEN_APPLE, GREEN_APPLE,
+            GREEN_APPLE, GREEN_APPLE, GREEN_APPLE, GREEN_APPLE, GREEN_APPLE, GREEN_APPLE,
+            GREEN_APPLE, GREEN_APPLE, GREEN_APPLE, GREEN_APPLE, GREEN_APPLE, GREEN_APPLE,
+            GREEN_APPLE, GREEN_APPLE, GREEN_APPLE, GREEN_APPLE, GREEN_APPLE, GREEN_APPLE,
+            GREEN_APPLE, GREEN_APPLE, GREEN_APPLE, GREEN_APPLE, GREEN_APPLE, GREEN_APPLE,
+            GREEN_APPLE, GREEN_APPLE, GREEN_APPLE, GREEN_APPLE, GREEN_APPLE, GREEN_APPLE,
     };
 
     public static int option() {
@@ -71,10 +84,13 @@ public class Main {
         System.out.println("One-Armed Bandit Bonanza");
 
         int option;
+        int gameCount = 1;
+        int gameWon = 0;
         do {
             option = menu();
 
             if (option == 1) {
+                System.out.printf("Game #%d (Games won: %d)%n%n", gameCount++, gameWon);
                 int lotterySize = 3;
                 String[] resultFruits = runSlotGame(lotterySize);
                 System.out.println(String.join(" ", resultFruits));
@@ -88,17 +104,14 @@ public class Main {
 
                 if(areTheSame(resultFruits)){
                     System.out.println("You have won!");
+                    gameWon++;
                 } else {
                     System.out.println("Try again!");
                 }
 
                 System.out.println();
             }
-
-            else if (option == 2) {
-                System.exit(0)
-            }
-            
         } while (option == 1);
+        //Quake
     }
 }
